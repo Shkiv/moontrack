@@ -1,6 +1,10 @@
 package moontrack.analytics.communication;
 
+import java.util.Date;
 import java.util.concurrent.locks.Lock;
+
+import org.apache.catalina.tribes.Member;
+import org.hibernate.Session;
 
 import com.google.common.util.concurrent.Striped;
 import com.moonmana.PlatformID;
@@ -218,6 +222,11 @@ public class TrackRegistrationProcessor extends AnalyticsMessageProccessor<Track
 
 	public ARealmUser getRegisteredUser() {
 		return registeredUser;
+	}
+
+	public void performStatic(Session session, Date currentDate, Member sender) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

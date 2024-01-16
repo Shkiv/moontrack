@@ -14,4 +14,9 @@ public class CommunicationMessage {
 		return null;
 	}
 
+	public MessageProcessor<?> getMessageProcessor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

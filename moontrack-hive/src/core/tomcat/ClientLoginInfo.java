@@ -9,4 +9,9 @@ public class ClientLoginInfo {
 		return null;
 	}
 
+	public String writeInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
