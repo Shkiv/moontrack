@@ -17,4 +17,9 @@ public class Geoip {
 		
 	}
 
+	public String geoip(int ipv4) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -1,7 +1,7 @@
 package core.distribution.communication;
 
 import core.tomcat.ClientLoginInfo;
-import moontrack.analytics.communication.UserServicesContainer;
+import core.userIdentification.UserServicesContainer;
 
 public class DistributionRegistrationInfo {
 

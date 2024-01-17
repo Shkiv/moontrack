@@ -29,4 +29,29 @@ public class MessageProcessor <Mess extends Serializable> {
 		
 	}
 
+	protected boolean isStaticPerform() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	protected Session createSession() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void clean() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected boolean shouldLog() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void init() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

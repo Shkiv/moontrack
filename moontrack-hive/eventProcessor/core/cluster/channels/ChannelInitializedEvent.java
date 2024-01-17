@@ -2,7 +2,7 @@ package core.cluster.channels;
 
 import com.moonmana.events.IEvent;
 
-import moontrack.analytics.IChannelProvider;
+import core.cluster.IChannelProvider;
 
 public class ChannelInitializedEvent implements IEvent {
 
