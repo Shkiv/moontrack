@@ -17,4 +17,9 @@ public class Log {
 		
 	}
 
+	public static void outError(String string, Throwable e) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
