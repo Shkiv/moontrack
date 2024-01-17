@@ -5,7 +5,6 @@ import java.util.Date;
 
 import analytics.model.AnalyticsEvent;
 import analytics.model.user.ARealmUser;
-import core.action.exceptions.InvalidActionException;
 import core.cluster.core.MessageProcessor;
 import moontrack.analytics.AnalyticsCluster;
 
@@ -25,7 +24,7 @@ public class EventMessage extends AnalyticsMessage implements Serializable {
 	public MessageProcessor<?> getMessageProcessor() {
 		return new AnalyticsMessageProccessor<EventMessage>(this) {
 			@Override
-			protected void perform() throws InvalidActionException {
+			protected void perform() {
 				ARealmUser realmUser = getRealmUser();
 				if (realmUser != null) {
 					AnalyticsEvent event = new AnalyticsEvent(type, value, new Date(), realmUser);

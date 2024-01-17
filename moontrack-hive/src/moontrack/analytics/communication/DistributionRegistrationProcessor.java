@@ -9,7 +9,6 @@ import org.hibernate.query.Query;
 
 import analytics.model.user.AnalyticsUser;
 import analytics.model.user.DistributionUserRegistration;
-import core.action.exceptions.InvalidActionException;
 import core.cluster.core.MessageProcessor;
 import core.geoip.Geoip;
 import core.userIdentification.UserServicesContainer;
@@ -23,7 +22,7 @@ public class DistributionRegistrationProcessor
 	}
 
 	@Override
-	protected void perform() throws InvalidActionException {
+	protected void perform() {
 		DistributionUserRegistration dUser = new DistributionUserRegistration(message.gameId,
 				message.distributionUserId, currentDate, message.userServiceId,
 				LoginInfoUtil.convert(message.loginInfo));

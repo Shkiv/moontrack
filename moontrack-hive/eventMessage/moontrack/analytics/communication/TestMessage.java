@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import org.hibernate.Session;
 
-import core.action.exceptions.InvalidActionException;
 import core.cluster.core.CommunicationMessage;
 import core.cluster.core.MessageProcessor;
 
@@ -22,7 +21,7 @@ public class TestMessage extends CommunicationMessage implements Serializable{
 	public MessageProcessor<?> getMessageProcessor() {
 		return new MessageProcessor<TestMessage>(this) {
 			@Override
-			protected void perform() throws InvalidActionException {
+			protected void perform() {
 				Log.out("Test Message Received: " + messageText);
 			}
 			

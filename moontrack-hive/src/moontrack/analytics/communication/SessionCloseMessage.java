@@ -2,7 +2,6 @@ package moontrack.analytics.communication;
 
 import java.util.Date;
 
-import core.action.exceptions.InvalidActionException;
 import core.cluster.core.MessageProcessor;
 import moontrack.analytics.AnalyticsCluster;
 
@@ -22,7 +21,7 @@ public class SessionCloseMessage extends AnalyticsMessage {
 	public MessageProcessor<?> getMessageProcessor() {
 		return new AnalyticsMessageProccessor<SessionCloseMessage>(this) {
 			@Override
-			protected void perform() throws InvalidActionException {
+			protected void perform() {
 				trackSessionClosed(endDate, numUpdates);
 			}
 	};

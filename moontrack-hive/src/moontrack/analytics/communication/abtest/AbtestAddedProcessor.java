@@ -14,7 +14,6 @@ import com.moonmana.log.Log;
 
 import analytics.model.IAPPurchase;
 import analytics.model.user.ARealmUser;
-import core.action.exceptions.InvalidActionException;
 import core.cluster.core.MessageProcessor;
 import hive.model.abtest.AbTest;
 import hive.model.abtest.AbTestGroup;
@@ -31,7 +30,7 @@ public class AbtestAddedProcessor extends MessageProcessor<AbtestAddedMessage> {
 	}
 
 	@Override
-	protected void perform() throws InvalidActionException {
+	protected void perform() {
 		Log.out("AbtestAdded message received");
 		AbTest abtest = message.getAbtest();
 		Log.out(abtest.toString());

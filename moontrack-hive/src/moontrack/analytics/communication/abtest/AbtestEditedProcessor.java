@@ -2,7 +2,6 @@ package moontrack.analytics.communication.abtest;
 
 import com.moonmana.log.Log;
 
-import core.action.exceptions.InvalidActionException;
 import core.cluster.core.MessageProcessor;
 
 public class AbtestEditedProcessor extends MessageProcessor<AbtestEditedMessage> {
@@ -12,7 +11,7 @@ public class AbtestEditedProcessor extends MessageProcessor<AbtestEditedMessage>
 	}
 
 	@Override
-	protected void perform() throws InvalidActionException {
+	protected void perform() {
 		Log.out("AbtestEditedMessage received");
 
 //		Abtest test = session.load(Abtest.class, message.getAbtest().getId());

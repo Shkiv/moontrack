@@ -13,7 +13,6 @@ import com.moonmana.UserServicesID;
 import analytics.model.user.ARealmUser;
 import analytics.model.user.AnalyticsUser;
 import analytics.model.user.DistributionUserRegistration;
-import core.action.exceptions.InvalidActionException;
 import moontrack.analytics.LoginInfoUtil;
 
 public class TrackRegistrationProcessor extends AnalyticsMessageProccessor<TrackRegistrationMessageV2> {
@@ -134,7 +133,7 @@ public class TrackRegistrationProcessor extends AnalyticsMessageProccessor<Track
 	}
 
 	@Override
-	protected void perform() throws InvalidActionException {
+	protected void perform() {
 		Triad triad = new Triad(message);
 		ARealmUser rUser = null;
 		Lock lock = registrationLocks.get(triad);

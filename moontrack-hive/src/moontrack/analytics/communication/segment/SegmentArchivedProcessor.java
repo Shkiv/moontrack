@@ -6,7 +6,6 @@ import javax.persistence.criteria.Root;
 
 import com.moonmana.log.Log;
 
-import core.action.exceptions.InvalidActionException;
 import core.cluster.core.MessageProcessor;
 import hive.model.segment.Segment;
 import hive.model.segment.SegmentUser;
@@ -18,7 +17,7 @@ public class SegmentArchivedProcessor extends MessageProcessor<SegmentArchivedMe
 	}
 
 	@Override
-	protected void perform() throws InvalidActionException {
+	protected void perform() {
 		// Be careful: persistence context is not synchronized with the result and there
 		// is no optimistic locking of the involved entities.
 		transaction = session.beginTransaction();

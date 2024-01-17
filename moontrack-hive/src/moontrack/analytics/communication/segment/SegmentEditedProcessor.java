@@ -2,7 +2,6 @@ package moontrack.analytics.communication.segment;
 
 import com.moonmana.log.Log;
 
-import core.action.exceptions.InvalidActionException;
 import core.cluster.core.MessageProcessor;
 import hive.model.segment.Segment;
 
@@ -13,7 +12,7 @@ public class SegmentEditedProcessor extends MessageProcessor<SegmentEditedMessag
 	}
 
 	@Override
-	protected void perform() throws InvalidActionException {
+	protected void perform() {
 		Log.out("SegmentEdited message received");
 		Log.out(message.getSegment().toString());
 

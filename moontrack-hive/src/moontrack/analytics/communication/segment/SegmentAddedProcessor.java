@@ -16,7 +16,6 @@ import com.moonmana.log.Log;
 
 import analytics.model.IAPPurchase;
 import analytics.model.user.ARealmUser;
-import core.action.exceptions.InvalidActionException;
 import core.cluster.core.MessageProcessor;
 import hive.model.filter.FilterHub;
 import hive.model.segment.Segment;
@@ -29,7 +28,7 @@ public class SegmentAddedProcessor extends MessageProcessor<SegmentAddedMessage>
 	}
 
 	@Override
-	protected void perform() throws InvalidActionException {
+	protected void perform() {
 		Log.out("SegmentAdded message received");
 		Log.out(message.getSegment().toString());
 
