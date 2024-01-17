@@ -12,4 +12,9 @@ public class Log {
 		
 	}
 
+	public static void out(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
